@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		987B095F7C43530FB730555B /* Pods_TVI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A33DF38CF6B85AEFBFE26B /* Pods_TVI.framework */; };
 		D318C8ED1FEE93900008C9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318C8EC1FEE93900008C9FF /* AppDelegate.swift */; };
 		D318C8EF1FEE93900008C9FF /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318C8EE1FEE93900008C9FF /* LocationViewController.swift */; };
 		D318C8F11FEE93900008C9FF /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318C8F01FEE93900008C9FF /* ScanViewController.swift */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25A33DF38CF6B85AEFBFE26B /* Pods_TVI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9E258F79954CB30A57843D /* Pods-TVI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVI/Pods-TVI.release.xcconfig"; sourceTree = "<group>"; };
+		C4DC50A4ECB0E4B5E916194E /* Pods-TVI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVI/Pods-TVI.debug.xcconfig"; sourceTree = "<group>"; };
 		D318C8E91FEE93900008C9FF /* TVI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D318C8EC1FEE93900008C9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D318C8EE1FEE93900008C9FF /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -35,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				987B095F7C43530FB730555B /* Pods_TVI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16B289AC3E9D559E468F78A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4DC50A4ECB0E4B5E916194E /* Pods-TVI.debug.xcconfig */,
+				5A9E258F79954CB30A57843D /* Pods-TVI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D318C8E01FEE93900008C9FF = {
 			isa = PBXGroup;
 			children = (
 				D318C8EB1FEE93900008C9FF /* TVI */,
 				D318C8EA1FEE93900008C9FF /* Products */,
+				16B289AC3E9D559E468F78A1 /* Pods */,
+				D9798C1D2733814295B8F0B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +97,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		D9798C1D2733814295B8F0B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25A33DF38CF6B85AEFBFE26B /* Pods_TVI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D318C8FD1FEE93900008C9FF /* Build configuration list for PBXNativeTarget "TVI" */;
 			buildPhases = (
+				CBAD52E79223BFF64F7D395A /* [CP] Check Pods Manifest.lock */,
 				D318C8E51FEE93900008C9FF /* Sources */,
 				D318C8E61FEE93900008C9FF /* Frameworks */,
 				D318C8E71FEE93900008C9FF /* Resources */,
+				E897B224AE60B2B35573CC80 /* [CP] Embed Pods Frameworks */,
+				B5FD5E6ED2FB3E9DA6EF16F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,6 +174,86 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5FD5E6ED2FB3E9DA6EF16F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVI/Pods-TVI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBAD52E79223BFF64F7D395A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TVI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E897B224AE60B2B35573CC80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TVI/Pods-TVI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFImageHelper/AFImageHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/TWMessageBarManager/TWMessageBarManager.framework",
+				"${BUILT_PRODUCTS_DIR}/UIScrollView-InfiniteScroll/UIScrollView_InfiniteScroll.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFImageHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TWMessageBarManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIScrollView_InfiniteScroll.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVI/Pods-TVI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D318C8E51FEE93900008C9FF /* Sources */ = {
@@ -292,6 +399,7 @@
 		};
 		D318C8FE1FEE93900008C9FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4DC50A4ECB0E4B5E916194E /* Pods-TVI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +416,7 @@
 		};
 		D318C8FF1FEE93900008C9FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A9E258F79954CB30A57843D /* Pods-TVI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
