@@ -18,5 +18,6 @@ target 'TVI' do
     pod 'UIScrollView-InfiniteScroll'
     pod 'ESPullToRefresh'
     pod 'TWMessageBarManager'
+    pod 'GoogleMaps'
 
 end
