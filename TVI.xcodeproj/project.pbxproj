@@ -16,6 +16,10 @@
 		D318C8F91FEE93900008C9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D318C8F71FEE93900008C9FF /* LaunchScreen.storyboard */; };
 		D318C9021FEEB7700008C9FF /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318C9011FEEB7700008C9FF /* AlertViewController.swift */; };
 		D318C9041FEEB77D0008C9FF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318C9031FEEB77D0008C9FF /* ProfileViewController.swift */; };
+		D396164E1FEFEE91006928CA /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D396164D1FEFEE91006928CA /* AlertTableViewCell.swift */; };
+		D39616521FEFFC95006928CA /* LocationNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39616511FEFFC95006928CA /* LocationNavigationVC.swift */; };
+		D39616541FF00418006928CA /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39616531FF00418006928CA /* MainTabViewController.swift */; };
+		D39616591FF00A61006928CA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39616581FF00A61006928CA /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		D318C8FA1FEE93900008C9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D318C9011FEEB7700008C9FF /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		D318C9031FEEB77D0008C9FF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D396164D1FEFEE91006928CA /* AlertTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		D39616511FEFFC95006928CA /* LocationNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNavigationVC.swift; sourceTree = "<group>"; };
+		D39616531FF00418006928CA /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		D39616581FF00A61006928CA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 		D318C8EB1FEE93900008C9FF /* TVI */ = {
 			isa = PBXGroup;
 			children = (
+				D396164C1FEFEE75006928CA /* View */,
 				D318C9001FEEB73F0008C9FF /* ViewController */,
 				D318C8EC1FEE93900008C9FF /* AppDelegate.swift */,
 				D318C8F21FEE93900008C9FF /* Main.storyboard */,
@@ -89,12 +98,31 @@
 		D318C9001FEEB73F0008C9FF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D39616571FF00A4B006928CA /* DetailViewController */,
 				D318C8EE1FEE93900008C9FF /* LocationViewController.swift */,
 				D318C8F01FEE93900008C9FF /* ScanViewController.swift */,
 				D318C9011FEEB7700008C9FF /* AlertViewController.swift */,
 				D318C9031FEEB77D0008C9FF /* ProfileViewController.swift */,
+				D39616511FEFFC95006928CA /* LocationNavigationVC.swift */,
+				D39616531FF00418006928CA /* MainTabViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D396164C1FEFEE75006928CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D396164D1FEFEE91006928CA /* AlertTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D39616571FF00A4B006928CA /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D39616581FF00A61006928CA /* FilterViewController.swift */,
+			);
+			path = DetailViewController;
 			sourceTree = "<group>";
 		};
 		D9798C1D2733814295B8F0B8 /* Frameworks */ = {
@@ -228,6 +256,7 @@
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftQRCode/SwiftQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
@@ -246,6 +275,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
@@ -265,11 +295,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D396164E1FEFEE91006928CA /* AlertTableViewCell.swift in Sources */,
+				D39616541FF00418006928CA /* MainTabViewController.swift in Sources */,
 				D318C8F11FEE93900008C9FF /* ScanViewController.swift in Sources */,
+				D39616591FF00A61006928CA /* FilterViewController.swift in Sources */,
 				D318C8ED1FEE93900008C9FF /* AppDelegate.swift in Sources */,
 				D318C9041FEEB77D0008C9FF /* ProfileViewController.swift in Sources */,
 				D318C8EF1FEE93900008C9FF /* LocationViewController.swift in Sources */,
 				D318C9021FEEB7700008C9FF /* AlertViewController.swift in Sources */,
+				D39616521FEFFC95006928CA /* LocationNavigationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

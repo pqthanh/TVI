@@ -9,7 +9,7 @@
 import UIKit
 import SwiftQRCode
 
-class SecondViewController: UIViewController {
+class ScanViewController: UIViewController {
 
     @IBOutlet weak var viewPayment: UIView!
     let scanner = QRCode()
