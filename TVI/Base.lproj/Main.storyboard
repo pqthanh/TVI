@@ -70,17 +70,53 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28x-VL-Rdj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-jV-a26">
+                                        <rect key="frame" x="10" y="484" width="355" height="50"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.36470588240000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="cjm-xe-XOt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="Thanh Toán">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="paymentAction" destination="8rJ-Kc-sve" eventType="touchUpInside" id="CRL-Sh-Cvm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aAl-jV-a26" firstAttribute="leading" secondItem="28x-VL-Rdj" secondAttribute="leading" constant="10" id="B23-eT-wKV"/>
+                                    <constraint firstAttribute="trailing" secondItem="aAl-jV-a26" secondAttribute="trailing" constant="10" id="ENL-Gh-kba"/>
+                                    <constraint firstAttribute="bottom" secondItem="aAl-jV-a26" secondAttribute="bottom" constant="20" id="R3M-dZ-7S7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="28x-VL-Rdj" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="13G-i8-jod"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="28x-VL-Rdj" secondAttribute="trailing" id="Agw-Lf-ZtV"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="28x-VL-Rdj" secondAttribute="bottom" id="b4F-9t-WwZ"/>
+                            <constraint firstItem="28x-VL-Rdj" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="gy7-Vt-2Jb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="qr-code" id="cPa-gy-q4n">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Thanh Toán" id="NBg-Mn-SJ8"/>
+                    <connections>
+                        <outlet property="viewPayment" destination="28x-VL-Rdj" id="KDH-Vh-LhI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="-20"/>
+            <point key="canvasLocation" x="1340" y="-20.239880059970016"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -133,7 +169,7 @@
         <!--Thông Báo-->
         <scene sceneID="Vfl-hK-EqD">
             <objects>
-                <viewController id="s9B-oi-GEg" customClass="SecondViewController" customModule="TVI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="s9B-oi-GEg" customClass="AlertViewController" customModule="TVI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M5Y-1X-Xyd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,7 +209,7 @@
         <!--Navigation Controller-->
         <scene sceneID="LFH-kp-JB1">
             <objects>
-                <navigationController id="zFj-nU-8vJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AlertViewControllerId" id="zFj-nU-8vJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="alert" id="DJb-9R-qLL">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
