@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		987B095F7C43530FB730555B /* Pods_TVI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A33DF38CF6B85AEFBFE26B /* Pods_TVI.framework */; };
+		D3079C591FF0688D0067E9D6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3079C581FF0688D0067E9D6 /* Location.swift */; };
 		D318C8ED1FEE93900008C9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318C8EC1FEE93900008C9FF /* AppDelegate.swift */; };
 		D318C8EF1FEE93900008C9FF /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318C8EE1FEE93900008C9FF /* LocationViewController.swift */; };
 		D318C8F11FEE93900008C9FF /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318C8F01FEE93900008C9FF /* ScanViewController.swift */; };
@@ -26,6 +27,7 @@
 		25A33DF38CF6B85AEFBFE26B /* Pods_TVI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9E258F79954CB30A57843D /* Pods-TVI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVI/Pods-TVI.release.xcconfig"; sourceTree = "<group>"; };
 		C4DC50A4ECB0E4B5E916194E /* Pods-TVI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVI/Pods-TVI.debug.xcconfig"; sourceTree = "<group>"; };
+		D3079C581FF0688D0067E9D6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D318C8E91FEE93900008C9FF /* TVI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D318C8EC1FEE93900008C9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D318C8EE1FEE93900008C9FF /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D3079C571FF0686A0067E9D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3079C581FF0688D0067E9D6 /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D318C8E01FEE93900008C9FF = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		D318C8EB1FEE93900008C9FF /* TVI */ = {
 			isa = PBXGroup;
 			children = (
+				D3079C571FF0686A0067E9D6 /* Model */,
 				D396164C1FEFEE75006928CA /* View */,
 				D318C9001FEEB73F0008C9FF /* ViewController */,
 				D318C8EC1FEE93900008C9FF /* AppDelegate.swift */,
@@ -297,6 +308,7 @@
 			files = (
 				D396164E1FEFEE91006928CA /* AlertTableViewCell.swift in Sources */,
 				D39616541FF00418006928CA /* MainTabViewController.swift in Sources */,
+				D3079C591FF0688D0067E9D6 /* Location.swift in Sources */,
 				D318C8F11FEE93900008C9FF /* ScanViewController.swift in Sources */,
 				D39616591FF00A61006928CA /* FilterViewController.swift in Sources */,
 				D318C8ED1FEE93900008C9FF /* AppDelegate.swift in Sources */,

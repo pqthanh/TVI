@@ -41,7 +41,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, UIPop
         popoverContent.modalPresentationStyle = UIModalPresentationStyle.popover
         popoverContent.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.right
         popoverContent.selectedBlock =  { (type) -> Void in
-            
+            popoverContent.dismiss(animated: true, completion: nil)
         }
         let popover = popoverContent.popoverPresentationController
         popoverContent.preferredContentSize = CGSize(width: 260, height: 320)
