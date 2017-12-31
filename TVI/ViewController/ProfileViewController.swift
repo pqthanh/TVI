@@ -14,6 +14,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view3: UIView!
+    @IBOutlet weak var cover: UIImageView!
+    @IBOutlet weak var avata: UIImageView!
+    @IBOutlet weak var btnUpdate: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,11 @@ class ProfileViewController: UIViewController {
         self.view1.layer.cornerRadius = 5.0
         self.view2.layer.cornerRadius = 5.0
         self.view3.layer.cornerRadius = 5.0
+        self.cover.layer.cornerRadius = 5.0
+        self.btnUpdate.layer.cornerRadius = 5.0
+        self.avata.layer.cornerRadius = 50.0
+        self.avata.layer.borderWidth = 2.0
+        self.avata.layer.borderColor = UIColor(hexString: "#F35D54").cgColor
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)

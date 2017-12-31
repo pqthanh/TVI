@@ -37,3 +37,16 @@ class MainTabViewController: UITabBarController {
     */
 
 }
+
+extension Double {
+    func formatAsCurrency(currencyCode: String) -> String? {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.numberStyle = NumberFormatter.Style.currency
+        currencyFormatter.currencyCode = currencyCode
+        currencyFormatter.locale = (currencyCode == "VND" ? Locale(identifier: "vi") : Locale(identifier: "en"))
+        currencyFormatter.maximumFractionDigits = floor(self) == self ? 0 : 2
+        let locale = NSLocale(localeIdentifier: currencyCode)
+        let currencySymbol = locale.displayName(forKey: .currencySymbol, value: currencyCode) ?? currencyCode
+        return currencyFormatter.string(from: NSNumber(value: self))?.replacingOccurrences(of: currencySymbol, with: "").replacingOccurrences(of: " ", with: "")
+    }
+}

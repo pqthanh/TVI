@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Italic</string>
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="CustomInfoWindow" id="iN0-l3-epB" customClass="CustomInfoWindow" customModule="TVI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="110"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tour du lịch dành cho khách đoàn, khách lẻ" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEJ-gc-OT6">
+                    <rect key="frame" x="10" y="65" width="200" height="28"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo" translatesAutoresizingMaskIntoConstraints="NO" id="t8U-2Y-NQz">
+                    <rect key="frame" x="10" y="10" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="t8U-2Y-NQz" secondAttribute="height" multiplier="1:1" id="hqQ-i1-ehq"/>
+                        <constraint firstAttribute="width" constant="50" id="iYS-0u-WnX"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="141c Đồng Đen, P.11 ,Q.Tân Bình, TP.HCM" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFi-WS-cfs">
+                    <rect key="frame" x="65" y="29" width="145" height="26"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="11"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vintourist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hif-uF-dte">
+                    <rect key="frame" x="65" y="10" width="145" height="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eEJ-gc-OT6" secondAttribute="bottom" constant="10" id="C6e-h2-BcX"/>
+                <constraint firstItem="MFi-WS-cfs" firstAttribute="top" secondItem="Hif-uF-dte" secondAttribute="bottom" constant="2" id="Cke-ik-HKk"/>
+                <constraint firstItem="Hif-uF-dte" firstAttribute="leading" secondItem="t8U-2Y-NQz" secondAttribute="trailing" constant="5" id="DAz-OM-R19"/>
+                <constraint firstItem="eEJ-gc-OT6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="GrB-Ts-6RK"/>
+                <constraint firstItem="t8U-2Y-NQz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Oy4-J3-BLd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Hif-uF-dte" secondAttribute="trailing" constant="10" id="SV0-fQ-bqj"/>
+                <constraint firstItem="Hif-uF-dte" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Ybe-4b-ST4"/>
+                <constraint firstItem="t8U-2Y-NQz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="cLj-SA-46p"/>
+                <constraint firstItem="eEJ-gc-OT6" firstAttribute="top" secondItem="t8U-2Y-NQz" secondAttribute="bottom" constant="5" id="fYl-BW-JPB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eEJ-gc-OT6" secondAttribute="trailing" constant="10" id="jAM-Fo-1Ps"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MFi-WS-cfs" secondAttribute="trailing" constant="10" id="lQH-bY-Tw2"/>
+                <constraint firstItem="MFi-WS-cfs" firstAttribute="leading" secondItem="t8U-2Y-NQz" secondAttribute="trailing" constant="5" id="xh4-bL-EJt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="desc" destination="eEJ-gc-OT6" id="sR9-ZE-ULw"/>
+                <outlet property="title" destination="Hif-uF-dte" id="OXH-l3-RN6"/>
+            </connections>
+            <point key="canvasLocation" x="-81" y="-214"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="demo" width="90" height="90"/>
+    </resources>
+</document>

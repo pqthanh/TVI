@@ -12,15 +12,16 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet weak var tableView: UITableView!
     
-    var selectedBlock: ((Location) -> Void)? = nil
+    var selectedBlock: ((Location, IndexPath) -> Void)? = nil
     var listItems = [Location]()
-    let cellReuseIdentifier = "cell"
+    var indexSelected = IndexPath()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.listItems.append(Location(code: "0", name: "Tất cả"))
         self.listItems.append(Location(code: "1", name: "Khách sạn"))
-        self.listItems.append(Location(code: "2", name: "Nhà hàng"))
+        self.listItems.append(Location(code: "2", name: "Ăn uống"))
         self.listItems.append(Location(code: "3", name: "Mua sắm"))
         self.listItems.append(Location(code: "4", name: "Du lịch"))
         self.listItems.append(Location(code: "5", name: "Massage"))
@@ -29,7 +30,7 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        self.tableView.tableFooterView = UIView()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,11 +39,16 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // create a cell for each table view row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as UITableViewCell
-        cell.textLabel?.numberOfLines = 0
+        let cell:FilterTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FilterTableViewCell") as! FilterTableViewCell!
         let value: Location = listItems[indexPath.row]
-        cell.textLabel?.text = value.name ?? ""
-        cell.imageView?.image = UIImage(named: value.code ?? "1")
+        if self.indexSelected == indexPath {
+            cell.imgSelect.image = UIImage(named: "checked")
+        }
+        else {
+            cell.imgSelect.image = nil
+        }
+        cell.title?.text = value.name ?? ""
+        cell.imgView?.image = UIImage(named: value.code ?? "1")
         return cell
     }
     
@@ -50,8 +56,9 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (self.selectedBlock != nil) {
             let country = self.listItems[indexPath.row] as Location
-            self.selectedBlock!(country)
+            self.selectedBlock!(country, indexPath)
         }
+        self.indexSelected = indexPath
     }
     
     override func didReceiveMemoryWarning() {
