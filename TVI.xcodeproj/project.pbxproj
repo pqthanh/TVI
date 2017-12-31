@@ -24,6 +24,7 @@
 		D39616521FEFFC95006928CA /* LocationNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39616511FEFFC95006928CA /* LocationNavigationVC.swift */; };
 		D39616541FF00418006928CA /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39616531FF00418006928CA /* MainTabViewController.swift */; };
 		D39616591FF00A61006928CA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39616581FF00A61006928CA /* FilterViewController.swift */; };
+		D3E72C3E1FF93A000063247F /* UserQrCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E72C3D1FF93A000063247F /* UserQrCodeVC.swift */; };
 		D3F3D14A1FF6748300052D45 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3D1491FF6748300052D45 /* CustomInfoWindow.swift */; };
 		D3F3D14C1FF6749100052D45 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3F3D14B1FF6749100052D45 /* CustomInfoWindow.xib */; };
 		D3F3D14E1FF6983F00052D45 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3D14D1FF6983F00052D45 /* FilterTableViewCell.swift */; };
@@ -51,6 +52,7 @@
 		D39616511FEFFC95006928CA /* LocationNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNavigationVC.swift; sourceTree = "<group>"; };
 		D39616531FF00418006928CA /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		D39616581FF00A61006928CA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		D3E72C3D1FF93A000063247F /* UserQrCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQrCodeVC.swift; sourceTree = "<group>"; };
 		D3F3D1491FF6748300052D45 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
 		D3F3D14B1FF6749100052D45 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInfoWindow.xib; sourceTree = "<group>"; };
 		D3F3D14D1FF6983F00052D45 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				D39616571FF00A4B006928CA /* DetailViewController */,
 				D318C8EE1FEE93900008C9FF /* LocationViewController.swift */,
+				D3E72C3D1FF93A000063247F /* UserQrCodeVC.swift */,
 				D318C8F01FEE93900008C9FF /* ScanViewController.swift */,
 				D318C9011FEEB7700008C9FF /* AlertViewController.swift */,
 				D318C9031FEEB77D0008C9FF /* ProfileViewController.swift */,
@@ -336,6 +339,7 @@
 				D3F3D14A1FF6748300052D45 /* CustomInfoWindow.swift in Sources */,
 				D31C5F4A1FF7EAC7001DC82F /* FService.swift in Sources */,
 				D396164E1FEFEE91006928CA /* AlertTableViewCell.swift in Sources */,
+				D3E72C3E1FF93A000063247F /* UserQrCodeVC.swift in Sources */,
 				D39616541FF00418006928CA /* MainTabViewController.swift in Sources */,
 				D3079C591FF0688D0067E9D6 /* Location.swift in Sources */,
 				D318C8F11FEE93900008C9FF /* ScanViewController.swift in Sources */,

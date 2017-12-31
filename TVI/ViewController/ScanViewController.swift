@@ -28,7 +28,7 @@ class ScanViewController: UIViewController, UITextFieldDelegate {
         self.btnPayment.layer.cornerRadius = 5.0
         self.hideKeyboardWhenTappedAround()
         
-        self.viewPayment.isHidden = false
+        self.viewPayment.isHidden = true
         scanner.prepareScan(view) { (stringValue) -> () in
             if stringValue != "" && stringValue.components(separatedBy: "#").count == 3 {
                 print(stringValue)
@@ -53,19 +53,19 @@ class ScanViewController: UIViewController, UITextFieldDelegate {
         scanner.scanFrame = view.bounds
     }
 
+    @IBAction func backAction() {
+        self.view.endEditing(true)
+        scanner.stopScan()
+        self.scanner.removeAllLayers()
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func paymentAction() {
         self.view.endEditing(true)
         self.viewPayment.isHidden = true
-        scanner.startScan()
+        scanner.stopScan()
         self.scanner.removeAllLayers()
-        scanner.prepareScan(view) { (stringValue) -> () in
-            if stringValue != "" {
-                print(stringValue)
-                self.scanner.stopScan()
-                self.scanner.removeAllLayers()
-                self.viewPayment.isHidden = false
-            }
-        }
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func checkPromo(promoCode: String) {
