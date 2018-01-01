@@ -20,6 +20,9 @@
 		D31C5F4A1FF7EAC7001DC82F /* FService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C5F471FF7EAC6001DC82F /* FService.swift */; };
 		D31C5F4B1FF7EAC7001DC82F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C5F481FF7EAC6001DC82F /* Router.swift */; };
 		D31C5F4E1FF7FC51001DC82F /* MapInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C5F4D1FF7FC51001DC82F /* MapInfoViewController.swift */; };
+		D3379E231FFA72920096B7CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3379E221FFA72920096B7CC /* LoginViewController.swift */; };
+		D3379E251FFA72A30096B7CC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3379E241FFA72A30096B7CC /* RegisterViewController.swift */; };
+		D3379E271FFA72B40096B7CC /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3379E261FFA72B40096B7CC /* ForgotViewController.swift */; };
 		D396164E1FEFEE91006928CA /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D396164D1FEFEE91006928CA /* AlertTableViewCell.swift */; };
 		D39616521FEFFC95006928CA /* LocationNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39616511FEFFC95006928CA /* LocationNavigationVC.swift */; };
 		D39616541FF00418006928CA /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39616531FF00418006928CA /* MainTabViewController.swift */; };
@@ -48,6 +51,9 @@
 		D31C5F471FF7EAC6001DC82F /* FService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FService.swift; sourceTree = "<group>"; };
 		D31C5F481FF7EAC6001DC82F /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D31C5F4D1FF7FC51001DC82F /* MapInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoViewController.swift; sourceTree = "<group>"; };
+		D3379E221FFA72920096B7CC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D3379E241FFA72A30096B7CC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D3379E261FFA72B40096B7CC /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		D396164D1FEFEE91006928CA /* AlertTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
 		D39616511FEFFC95006928CA /* LocationNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNavigationVC.swift; sourceTree = "<group>"; };
 		D39616531FF00418006928CA /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 		D318C9001FEEB73F0008C9FF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D3379E211FFA72810096B7CC /* RootViewController */,
 				D39616571FF00A4B006928CA /* DetailViewController */,
 				D318C8EE1FEE93900008C9FF /* LocationViewController.swift */,
 				D3E72C3D1FF93A000063247F /* UserQrCodeVC.swift */,
@@ -143,6 +150,16 @@
 				D31C5F471FF7EAC6001DC82F /* FService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		D3379E211FFA72810096B7CC /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D3379E221FFA72920096B7CC /* LoginViewController.swift */,
+				D3379E241FFA72A30096B7CC /* RegisterViewController.swift */,
+				D3379E261FFA72B40096B7CC /* ForgotViewController.swift */,
+			);
+			path = RootViewController;
 			sourceTree = "<group>";
 		};
 		D396164C1FEFEE75006928CA /* View */ = {
@@ -337,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3F3D14A1FF6748300052D45 /* CustomInfoWindow.swift in Sources */,
+				D3379E271FFA72B40096B7CC /* ForgotViewController.swift in Sources */,
 				D31C5F4A1FF7EAC7001DC82F /* FService.swift in Sources */,
 				D396164E1FEFEE91006928CA /* AlertTableViewCell.swift in Sources */,
 				D3E72C3E1FF93A000063247F /* UserQrCodeVC.swift in Sources */,
@@ -345,10 +363,12 @@
 				D318C8F11FEE93900008C9FF /* ScanViewController.swift in Sources */,
 				D39616591FF00A61006928CA /* FilterViewController.swift in Sources */,
 				D318C8ED1FEE93900008C9FF /* AppDelegate.swift in Sources */,
+				D3379E251FFA72A30096B7CC /* RegisterViewController.swift in Sources */,
 				D318C9041FEEB77D0008C9FF /* ProfileViewController.swift in Sources */,
 				D318C8EF1FEE93900008C9FF /* LocationViewController.swift in Sources */,
 				D31C5F4B1FF7EAC7001DC82F /* Router.swift in Sources */,
 				D31C5F4E1FF7FC51001DC82F /* MapInfoViewController.swift in Sources */,
+				D3379E231FFA72920096B7CC /* LoginViewController.swift in Sources */,
 				D3F3D14E1FF6983F00052D45 /* FilterTableViewCell.swift in Sources */,
 				D318C9021FEEB7700008C9FF /* AlertViewController.swift in Sources */,
 				D39616521FEFFC95006928CA /* LocationNavigationVC.swift in Sources */,
