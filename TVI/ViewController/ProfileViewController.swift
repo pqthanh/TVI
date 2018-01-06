@@ -14,8 +14,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view3: UIView!
+    @IBOutlet weak var view4: UIView!
     @IBOutlet weak var cover: UIImageView!
     @IBOutlet weak var avata: UIImageView!
+    @IBOutlet weak var lbMoney: UILabel!
+    @IBOutlet weak var btnChange: UIButton!
     @IBOutlet weak var btnUpdate: UIButton!
     
     override func viewDidLoad() {
@@ -25,6 +28,7 @@ class ProfileViewController: UIViewController {
         self.view1.layer.cornerRadius = 5.0
         self.view2.layer.cornerRadius = 5.0
         self.view3.layer.cornerRadius = 5.0
+        self.view4.layer.cornerRadius = 5.0
         self.cover.layer.cornerRadius = 5.0
         self.btnUpdate.layer.cornerRadius = 5.0
         self.avata.layer.cornerRadius = 50.0
@@ -51,6 +55,28 @@ class ProfileViewController: UIViewController {
     
     @IBAction func updateAction() {
         self.view.endEditing(true)
+    }
+    
+    @IBAction func pageAction() {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func chatAction() {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func passwordAction() {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func hítoryAction() {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func changeAction(_ sender: UIButton) {
+        self.view.endEditing(true)
+        self.btnChange.isSelected = !sender.isSelected
+        self.lbMoney.text = sender.isSelected ? "12$ - 264.000đ" : "12 TVI"
     }
     
     override func didReceiveMemoryWarning() {

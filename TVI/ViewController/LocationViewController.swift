@@ -95,18 +95,29 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, UIPop
     }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        let index: Int = marker.userData as! Int
-        if index == 1 {
-            let origin = "\(self.currentLocation?.latitude ?? 0.0),\(self.currentLocation?.longitude ?? 0.0)"
-            let destination = "\(10.789668),\(106.643115)"
-            self.drawPath(origin: origin, destination: destination)
+        let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let firstAction: UIAlertAction = UIAlertAction(title: "Đường đi", style: .default) { action -> Void in
+            let index: Int = marker.userData as! Int
+            if index == 1 {
+                let origin = "\(self.currentLocation?.latitude ?? 0.0),\(self.currentLocation?.longitude ?? 0.0)"
+                let destination = "\(10.789668),\(106.643115)"
+                self.drawPath(origin: origin, destination: destination)
+            }
+            if index == 2 {
+                let origin = "\(self.currentLocation?.latitude ?? 0.0),\(self.currentLocation?.longitude ?? 0.0)"
+                let destination = "\(10.786354),\(106.666379)"
+                self.drawPath(origin: origin, destination: destination)
+            }
+            mapView.selectedMarker = nil
         }
-        if index == 2 {
-            let origin = "\(self.currentLocation?.latitude ?? 0.0),\(self.currentLocation?.longitude ?? 0.0)"
-            let destination = "\(10.786354),\(106.666379)"
-            self.drawPath(origin: origin, destination: destination)
+        let secondAction: UIAlertAction = UIAlertAction(title: "Xem chi tiết", style: .default) { action -> Void in
+            print("Second Action pressed")
         }
-        mapView.selectedMarker = nil
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Bỏ qua", style: .cancel) { action -> Void in }
+        actionSheetController.addAction(firstAction)
+        actionSheetController.addAction(secondAction)
+        actionSheetController.addAction(cancelAction)
+        present(actionSheetController, animated: true, completion: nil)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
